@@ -4,7 +4,7 @@ import ru.job4j.MathFunc;
 
 public class Point {
     public static double distance(int x1, int y1, int x2, int y2) {
-        double rsl = Math.sqrt(Math.pow(x1 - x2, 2 + y1 - y2));
+        double rsl = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
         return rsl;
     }
 
