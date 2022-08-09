@@ -13,12 +13,9 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
-        int result1 = Calculator.func1(3);
+        int result1 = Calculator.func1(100);
         int result2 = Calculator.func2(5);
-        int result3 = Calculator.func1(100);
-        int total = result1 + result2 + result3;
+        int total = result1 + result2;
         System.out.println(total);
     }
 }
-
-
