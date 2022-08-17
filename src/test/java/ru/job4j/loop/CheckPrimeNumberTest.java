@@ -20,28 +20,7 @@ public class CheckPrimeNumberTest {
 
     @Test
     public void when1() {
-        int number = 1;
-        boolean result = CheckPrimeNumber.check(number);
-        assertThat(result).isFalse();
-    }
-
-    @Test
-    public void when9() {
-        int number = 9;
-        boolean result = CheckPrimeNumber.check(number);
-        assertThat(result).isFalse();
-    }
-
-    @Test
-    public void when13() {
-        int number = 13;
-        boolean result = CheckPrimeNumber.check(number);
-        assertThat(result).isTrue();
-    }
-
-    @Test
-    public void when15() {
-        int number = 15;
+        int number = 6;
         boolean result = CheckPrimeNumber.check(number);
         assertThat(result).isFalse();
     }
