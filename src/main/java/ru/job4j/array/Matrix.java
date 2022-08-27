@@ -5,7 +5,7 @@ public class Matrix {
         int[][] result = new int[size][size];
         for (int row = 1; row <= size; row++) {
             for (int cell = 1; cell <= size; cell++) {
-                result[row][cell] = row * cell;
+                result[row - 1][cell - 1] = row * cell;
             }
         }
         return result;
