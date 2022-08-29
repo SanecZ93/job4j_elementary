@@ -7,7 +7,7 @@ import static sun.util.locale.LocaleUtils.isEmpty;
 public class JavaNameValidator {
     public static boolean isNameValid(String name) {
         char[] array = name.toCharArray();
-        boolean valid = isEmpty(name) || isDigit(array[0]) || isUpperCase(array[0]);
+        boolean valid = isEmpty(name) && isDigit(array[0]) && isUpperCase(array[0]);
         if (valid) {
             for (int i = 1; i < array.length; i++) {
                 if (isSpecialSymbol(array[i]) || isLowerLatinLetter(array[i]) || isUpperLatinLetter(array[i])) {
