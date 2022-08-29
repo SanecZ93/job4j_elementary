@@ -7,16 +7,16 @@ import static sun.util.locale.LocaleUtils.isEmpty;
 public class JavaNameValidator {
     public static boolean isNameValid(String name) {
         char[] array = name.toCharArray();
-        boolean valid = true;
-        if (isEmpty(name) && isDigit(array[0]) && isUpperCase(array[0])) {
-            valid = false;
-        }
-        for (int i = 0; i < array.length; i++) {
-            if (isSpecialSymbol(array[i]) || isLowerLatinLetter(array[i]) || isUpperLatinLetter(array[i])) {
-                valid = false;
-                break;
+        boolean valid = isEmpty(name) || isDigit(array[0]) || isUpperCase(array[0]);
+        if (valid) {
+            for (int i = 1; i < array.length; i++) {
+                if (isSpecialSymbol(array[i]) || isLowerLatinLetter(array[i]) || isUpperLatinLetter(array[i])) {
+                    valid = false;
+                    break;
+                }
             }
         }
+
         return valid;
     }
 
