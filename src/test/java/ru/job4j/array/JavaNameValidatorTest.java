@@ -8,7 +8,7 @@ class JavaNameValidatorTest {
 
     @Test
     void whenEmptyNameInvalid() {
-        assertThat(isNameValid("")).isFalse();
+        assertThat(isNameValid(" ")).isFalse();
     }
 
     @Test
