@@ -11,7 +11,7 @@ class PointTest {
         Point a = new Point(0, 0);
         Point b = new Point(2, 0);
         double out = a.distance(b);
-        Assertions.assertEquals(expected, out, 0.01);
+        Assertions.assertEquals(expected, out, String.valueOf(0.01));
     }
 
     @Test
@@ -20,7 +20,7 @@ class PointTest {
         Point a = new Point(1, 0);
         Point b = new Point(2, 0);
         double out = a.distance(b);
-        Assertions.assertEquals(expected, out, 0.01);
+        Assertions.assertEquals(expected, out, String.valueOf(0.01));
     }
 
     @Test
@@ -29,6 +29,16 @@ class PointTest {
         Point a = new Point(2, 0);
         Point b = new Point(2, 0);
         double out = a.distance(b);
+        Assertions.assertEquals(expected, out, String.valueOf(0.01));
+    }
+
+    @Test
+    public void when20to20to20then0() {
+        double expected = 0;
+        Point a = new Point(2, 0);
+        Point b = new Point(2, 0);
+        Point c = new Point(2, 0);
+        double out = a.distance3d(b.distance(c));
         Assertions.assertEquals(expected, out, 0.01);
     }
 }
