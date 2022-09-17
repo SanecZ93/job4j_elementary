@@ -12,7 +12,7 @@ public class MaxTest {
         int first = 10;
         int second = 5;
         int third = 1;
-        int result = Max.maxThree(first, second, third);
+        int result = Max.max(first, second, third);
         int expected = 10;
         assertThat(result).isEqualTo(expected);
     }
@@ -23,7 +23,7 @@ public class MaxTest {
         int second = 10;
         int third = 1;
         int four = 4;
-        int result = Max.maxFour(first, second, third, four);
+        int result = Max.max(first, second, third, four);
         int expected = 10;
         assertThat(result).isEqualTo(expected);
     }
